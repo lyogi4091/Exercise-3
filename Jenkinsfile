@@ -32,7 +32,7 @@ node {
                 sh 'sudo git add python*.py';
                 sh 'sudo git commit -m "Commit after autopep8"';
                 sh 'sudo git push origin master';
-        }catch (nothing){
+        }catch (p){
             echo "No changes found to push"
         }
     }
