@@ -34,7 +34,7 @@ node {
 			sh 'sudo git commit -m "Commit after autopep8"'
 			sh 'sudo git push origin HEAD:master'
 			}catch (d){
-			echo "No changes found to push"
+			echo "No changes found to push."
 			}
         }
     }
