@@ -28,7 +28,7 @@ node {
                 }
                 }
     stage('Pushing the formatted code'){
-        dir('/var/lib/jenkins/workspace/Formatcheck-pushback'){
+        dir('/home/ciuser/Exercise-3'){
 		try{
 			sh 'sudo git add python_bad.py'
 			sh 'sudo git commit -m "Commit after autopep8"'

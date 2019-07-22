@@ -1,8 +1,8 @@
-name =      "Yogesh Kumar"
-PSNumber =     40003577
-weight = 60.25
-average = 49.06
-matches = 45
+name =         "Yogesh Kumar"
+PSNumber =       40003577
+weight =      60.25
+average =      49.06
+matches =        45
 # approach1
 print(name, PSNumber, weight)
 # approach2 using curl braces
@@ -16,8 +16,8 @@ x = {"Name": "Yogesh.L", "organisation": "LTTS", "DOJ": "12"}
 y = "My name is {} and I joined this {} organisation on {}th of December.".format(
     x["Name"], x["organisation"], x["DOJ"])
 print(y)
-print ("==================")
-z =  ["Yogesh Kumar", "'LTTS'", 25]
+print("==================")
+z = ["Yogesh Kumar", "'LTTS'", 25]
 p = "My name is {0[0]} and I joined this {0[1]} organisation on {0[2]}th of December.".format(
     z)
 print(p)
