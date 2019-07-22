@@ -27,7 +27,7 @@ node {
                 }
                 }
     stage('Pushing the formatted code to GitHub'){
-        dir('/var/lib/jenkins/workspace/Formatcheck-pushback'){
+        dir('/home/ciuser/Exercise-3'){
             try{
                 sh 'git config --global user.email "lingojuyogesh.kumar@ltts.com"';
                 sh 'git config --global user.name "Yogesh Kumar"'
