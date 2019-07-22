@@ -30,11 +30,9 @@ node {
     stage('Pushing the formatted code'){
         dir('/home/ciuser/Exercise-3'){
 		try{
-			sh 'sudo git config --global user.email "lingojuyogesh.kumar@ltts.com"';
-			sh 'sudo git config --global user.name "Yogesh Kumar"'
-			sh 'sudo git add python_bad.py';
-			sh 'sudo git commit -m "Commit after autopep8"';
-			sh 'sudo git push origin master';
+			sh 'sudo git add python_bad.py'
+			sh 'sudo git commit -m "Commit after autopep8"'
+			sh 'sudo git push origin master'
 			}catch (d){
 			echo "No changes found to push"
 			}
