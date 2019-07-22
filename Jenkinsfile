@@ -20,7 +20,7 @@ node {
             sh 'sudo docker exec testcontainer_remote_exercise3 cat /opt/python_bad.py'
             sh 'sudo docker exec testcontainer_remote_exercise3 pycodestyle --ignore=E501 /opt/python_bad.py'
             println "Code is already in good format"
-            }catch(x){
+            }catch(z){
                 if (Boolean.parseBoolean("${env.Autopep8}")){
                     sh 'sudo docker exec testcontainer_remote_exercise3 autopep8 -i /opt/python_bad.py'
                     sh 'sudo docker exec testcontainer_remote_exercise3 cat /opt/python_bad.py'
@@ -28,7 +28,7 @@ node {
                 }
                 }
     stage('Pushing the formatted code'){
-        dir('/home/ciuser/Exercise-3'){
+        dir('/var/lib/jenkins/workspace/Formatcheck-pushback'){
 		try{
 			sh 'sudo git add python_bad.py'
 			sh 'sudo git commit -m "Commit after autopep8"'

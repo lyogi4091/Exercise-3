@@ -1,5 +1,5 @@
-name =   "Yogesh Kumar"
-PSNumber = 40003577
+name =      "Yogesh Kumar"
+PSNumber =     40003577
 weight = 60.25
 average = 49.06
 matches = 45
