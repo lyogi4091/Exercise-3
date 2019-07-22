@@ -26,16 +26,19 @@ node {
                     println "Code is now formatted"
                 }
                 }
-    stage('Pushing the formatted code'){
-        dir('/home/ciuser/Exercise-3'){
+    stage('Pushing the formatted code to GitHub'){
+        dir('/var/lib/jenkins/workspace/Formatcheck-pushback'){
             try{
-                sh 'sudo git add python*.py';
-                sh 'sudo git commit -m "Commit after autopep8"';
-                sh 'sudo git push origin master';
-        }catch (p){
-            echo "No changes found to push"
+                sh 'git config --global user.email "lingojuyogesh.kumar@ltts.com"';
+                sh 'git config --global user.name "Yogesh Kumar"'
+                sh 'git add python*.py';
+                sh 'git commit -m "Commit after auto-format of code"';
+                sh 'git push origin master';
+		println "Code is pushed successfully.";
+                }catch(n){
+                    println "Code is already in good format. So, nothing to push."
+                }
         }
-    }
     }
 }
 }
